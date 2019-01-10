@@ -47,6 +47,11 @@
 
 									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
 
+									<h2>配列の定義</h2>
+									<p>MATLABでは配列のインデックスを定義するとき<code>[]</code>で囲い、各要素を<code>空白(スペース)</code>区切りで定義します。</p>
+									<pre><code>A = [1 2 3 4 5 6 7 8 9];</code></pre>
+									<p>また、MATLAB上では、配列は行ベクトルとしても扱われます。</p>
+
 									<hr class="major" />
 
 									<h2>行列の定義</h2>
@@ -61,19 +66,7 @@
 									<h2>行列の演算</h2>
 									<p>基本的に単一の算術演算子や関数では、行列の全ての要素に計算されます。<br>例えば、行列Aに対して、全ての要素にsin関数を計算したい場合は<code>sin(A)</code>のように記述することができます。
 									<br>他にも<code>A + 1</code>のように記述された加算、減算なども行列Aの全ての要素で計算されます。</p>
-									<p>しかし、</p>
-
-									<hr class="major" />
-
-									<h2>Magna etiam veroeros</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-
-									<hr class="major" />
-
-									<h2>Lorem aliquam bibendum</h2>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+									<p>しかし、行列の積を計算する場合、次元が適当でない場合エラーを出すので、行列Aのすべての要素を倍にしたい場合は<code>*</code>ではなく<code>.*</code>を使用します。</p>
 
 								</section>
 							</div>
