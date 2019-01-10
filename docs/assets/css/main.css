@@ -167,7 +167,7 @@ input, select, textarea {
 			}
 
 	strong, b {
-		color: #3d4449;
+		color: #222628;
 		font-weight: 600;
 	}
 
@@ -180,7 +180,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #3d4449;
+		color: #222628;
 		font-family: "Roboto Slab", serif;
 		font-weight: 700;
 		line-height: 1.5;
@@ -1814,7 +1814,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #3d4449;
+		color: #222628;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 600;
@@ -1879,7 +1879,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #3d4449;
+			color: #222628;
 			background: #ffffff;
 		}
 
@@ -1960,8 +1960,8 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #3d4449;
-			border-color: #3d4449;
+			background: #222628;
+			border-color: #222628;
 			color: #ffffff;
 			content: '\f00c';
 		}
@@ -2404,7 +2404,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #3d4449;
+			color: #222628;
 			font-size: 0.9em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -3472,7 +3472,7 @@ input, select, textarea {
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		color: #3d4449;
+		color: #222628;
 		font-family: "Roboto Slab", serif;
 		font-family: 400;
 		letter-spacing: 0.075em;
