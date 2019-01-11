@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>線形グラフを表示する - MATLAB WebGuide</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>MATLAB WebGuide</strong> by NIT,IC</a>
+									<!--
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+									</ul>
+									-->
+								</header>
+
+							<!-- Content -->
+							<p> </p>
+							<div class="box">
+								<section>
+									<div class="content">
+									<header class="main">
+										<h1>線形グラフを表示する</h1>
+										<p align="right">最終更新日: 2019/01/10 | 編集者: matusr8k | バージョン:R2018a</P>
+									</header>
+										<p>URL: https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLAB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/MATLAB%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E4%BD%BF%E3%81%84%E6%96%B9/matrixsample.m</p>
+									</div>
+
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+
+									<hr class="major" />
+
+									<h2>使用するサンプルコード</h2>
+
+									<hr class="major" />
+
+									<h2>ラインプロットを作成する</h2>
+									<p>MATLABでは配列のインデックスを定義するとき<code>[]</code>で囲い、各要素を<code>空白(スペース)</code>区切りで定義します。</p>
+									<pre><code>A = [1 2 3 4 5 6 7 8 9];</code></pre>
+									<p>また、MATLAB上では、配列は行ベクトルとしても扱われます。</p>
+
+									<hr class="major" />
+
+									<h2>二つのラインプロットを重ねて表示する</h2>
+									<p>MATLAB上で行列を定義するときは、</p>
+									<pre><code>A = [1 2 3   %1列目
+     2 3 4   %2列目
+     3 4 5]; %3列目</code></pre>
+									<p>のように記述します。また、改行の代わりに<code>;</code>を用いて記述することも可能です。<br>定義された行列Aの大きさを求めたいときは<code>size(A)</code>を使用することで各次元ごとの要素数を表示できます。
+									</p>
+									<p>行列Aの転置行列や逆行列を求めたい場合、転置行列は行列Aの後に<code>'</code>を付けることで求めることができ、逆行列は<code>inv(A)</code>で求めることができます。</p>
+
+									<h2>行列の演算</h2>
+									<p>基本的に単一の算術演算子や関数では、行列の全ての要素に計算されます。<br>例えば、行列Aに対して、全ての要素にsin関数を計算したい場合は<code>sin(A)</code>のように記述することができます。
+									<br>他にも<code>A + 1</code>のように記述された加算、減算なども行列Aの全ての要素で計算されます。</p>
+									<p>しかし、行列の積を計算する場合、次元が一致しない場合エラーを出すので、行列Aのすべての要素を倍にしたい場合は<code>*</code>ではなく<code>.*</code>を使用します。</p>
+
+									<p> </p>
+								</section>
+							</div>
+						</div>
+					</div>
+
+					<!-- Sidebar -->
+						<div id="sidebar">
+							<div class="inner">
+
+								<!-- Search
+									<section id="search" class="alt">
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+									</section>
+								-->
+
+								<!-- Menu -->
+									<nav id="menu">
+										<header class="major">
+											<h2>Menu</h2>
+										</header>
+										<ul>
+											<li><a href="index.html">ホーム</a></li>
+											<li><a href="guide0.html">GITHUBサンプルコードの利用方法</a></li>
+											<li>
+												<span class="opener">MATLABの基本的な使い方</span>
+												<ul>
+													<li><a href="guide1.html">配列・行列の使い方</a></li>
+													<li><a href="guide2.html">多項式の扱い方</a></li>
+												</ul>
+											</li>
+											<li>
+												<span class="opener">グラフの作成方法</span>
+												<ul>
+													<li><a href="guide3.html">線形グラフを表示する</a></li>
+													<li><a href="guide4.html">複数のグラフを並べて表示する</a></li>
+													<li><a href="guide5.html">対数グラフを表示する</a></li>
+													<li><a href="guide6.html">離散データの散布図を表示する</a></li>
+													<li><a href="guide7.html">MATLABで使えるplot関数の例</a></li>
+												</ul>
+											</li>
+											<li>
+												<span class="opener">ファイルの入出力</span>
+												<ul>
+													<li><a href="guide8.html">テキストファイルを読み込む</a></li>
+													<li><a href="guide9.html">テキストファイルに書き出す</a></li>
+													<li><a href="guide10.html">CSVデータの入出力</a></li>
+													<li><a href="guide11.html">画像データの入出力</a></li>
+													<li><a href="guide12.html">音声データの入出力</a></li>
+												</ul>
+											</li>
+											<li><a href="guide13.html">ThingSpeakの利用</a></li>
+										</ul>
+									</nav>
+
+								<!-- Section
+									<section>
+										<header class="major">
+											<h2>Ante interdum</h2>
+										</header>
+										<div class="mini-posts">
+											<article>
+												<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+											</article>
+											<article>
+												<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+											</article>
+											<article>
+												<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+											</article>
+										</div>
+										<ul class="actions">
+											<li><a href="#" class="button">More</a></li>
+										</ul>
+									</section>
+								-->
+
+								<!-- Section -->
+									<section>
+										<header class="major">
+											<h2>連絡先</h2>
+										</header>
+										<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+										<ul class="contact">
+											<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
+											<li class="fa-phone">(000) 000-0000</li>
+											<li class="fa-home">1234 Somewhere Road #8254<br />
+											Nashville, TN 00000-0000</li>
+										</ul>
+									</section>
+
+								<!-- Footer -->
+									<footer id="footer">
+										<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
