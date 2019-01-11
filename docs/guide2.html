@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>配列・行列の使い方 - MATLAB WebGuide</title>
+		<title>多項式の使い方 - MATLAB WebGuide</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -41,34 +41,28 @@
 								<section>
 									<div class="content">
 									<header class="main">
-										<h1>配列・行列の使い方</h1>
+										<h1>多項式の使い方</h1>
 										<p align="right">最終更新日: 2019/01/10 | 編集者: matusr8k | バージョン:R2018a</P>
 									</header>
-										<p>URL: https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLAB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/MATLAB%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E4%BD%BF%E3%81%84%E6%96%B9/matrixsample.m</p>
+										<p>URL: https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLAB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/MATLAB%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E4%BD%BF%E3%81%84%E6%96%B9/polunomialsample.m</p>
 									</div>
 
 									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
 
-									<h2>配列の定義</h2>
-									<p>MATLABでは配列のインデックスを定義するとき<code>[]</code>で囲い、各要素を<code>空白(スペース)</code>区切りで定義します。</p>
-									<pre><code>A = [1 2 3 4 5 6 7 8 9];</code></pre>
-									<p>また、MATLAB上では、配列は行ベクトルとしても扱われます。</p>
-
 									<hr class="major" />
 
-									<h2>行列の定義</h2>
-									<p>MATLAB上で行列を定義するときは、</p>
-									<pre><code>A = [1 2 3   %1列目
-     2 3 4   %2列目
-     3 4 5]; %3列目</code></pre>
-									<p>のように記述します。また、改行の代わりに<code>;</code>を用いて記述することも可能です。<br>定義された行列Aの大きさを求めたいときは<code>size(A)</code>を使用することで各次元ごとの要素数を表示できます。
-									</p>
-									<p>行列Aの転置行列や逆行列を求めたい場合、転置行列は行列Aの後に<code>'</code>を付けることで求めることができ、逆行列は<code>inv(A)</code>で求めることができます。</p>
+									<h2>多項式の定義</h2>
+									<p>不定元x(1変数)の多項式は行ベクトルによって表され、例えば4x&sup2; + 2x + 1を表す場合は</p>
+									<pre><code>fx = [4 2 1];</code></pre>
+									<p>のように表記します。</p>
 
-									<h2>行列の演算</h2>
-									<p>基本的に単一の算術演算子や関数では、行列の全ての要素に計算されます。<br>例えば、行列Aに対して、全ての要素にsin関数を計算したい場合は<code>sin(A)</code>のように記述することができます。
-									<br>他にも<code>A + 1</code>のように記述された加算、減算なども行列Aの全ての要素で計算されます。</p>
-									<p>しかし、行列の積を計算する場合、次元が一致しない場合エラーを出すので、行列Aのすべての要素を倍にしたい場合は<code>*</code>ではなく<code>.*</code>を使用します。</p>
+									<p>ただし、5x&sup3; - 2xのような多項式を扱う場合、空いている項には0を明示する必要があります。</p>
+									<pre><code>fx = [5 0 -2 0];</code></pre>
+
+									<h2>多項式の演算</h2>
+									<p>多項式fxの計算を行う場合は<code>polyval(fx, x)</code>を使用します。xには変数の値を入力します。<br>
+										また、多項式fxの解を求める場合は<code>roots(fx)</code>を使用します。解はn次多項式の場合、n×1の列ベクトルを返します。</p>
+									<p>また、多項式fxを微分積分することも可能です。微分するには<code>polyder(fx)</code>を、積分するには<code>polyint(fx)</code>を使用します。</p>
 
 									<p> </p>
 								</section>
@@ -95,35 +89,35 @@
 										</header>
 										<ul>
 											<li><a href="index.html">ホーム</a></li>
-											<li><a href="generic.html">GITHUBサンプルコードの利用方法</a></li>
+											<li><a href="guide0.html">GITHUBサンプルコードの利用方法</a></li>
 											<li>
 												<span class="opener">MATLABの基本的な使い方</span>
 												<ul>
-													<li><a href="elements.html">配列・行列の使い方</a></li>
-													<li><a href="#">多項式の扱い方</a></li>
+													<li><a href="guide1.html">配列・行列の使い方</a></li>
+													<li><a href="guide2.html">多項式の扱い方</a></li>
 												</ul>
 											</li>
 											<li>
 												<span class="opener">グラフの作成方法</span>
 												<ul>
-													<li><a href="#">線形グラフを表示する</a></li>
-													<li><a href="#">複数のグラフを並べて表示する</a></li>
-													<li><a href="#">対数グラフを表示する</a></li>
-													<li><a href="#">離散データの散布図を表示する</a></li>
-													<li><a href="#">MATLABで使えるplot関数の例</a></li>
+													<li><a href="guide3.html">線形グラフを表示する</a></li>
+													<li><a href="guide4.html">複数のグラフを並べて表示する</a></li>
+													<li><a href="guide5.html">対数グラフを表示する</a></li>
+													<li><a href="guide6.html">離散データの散布図を表示する</a></li>
+													<li><a href="guide7.html">MATLABで使えるplot関数の例</a></li>
 												</ul>
 											</li>
 											<li>
 												<span class="opener">ファイルの入出力</span>
 												<ul>
-													<li><a href="#">テキストファイルを読み込む</a></li>
-													<li><a href="#">テキストファイルに書き出す</a></li>
-													<li><a href="#">CSVデータの入出力</a></li>
-													<li><a href="#">画像データの入出力</a></li>
-													<li><a href="#">音声データの入出力</a></li>
+													<li><a href="guide8.html">テキストファイルを読み込む</a></li>
+													<li><a href="guide9.html">テキストファイルに書き出す</a></li>
+													<li><a href="guide10.html">CSVデータの入出力</a></li>
+													<li><a href="guide11.html">画像データの入出力</a></li>
+													<li><a href="guide12.html">音声データの入出力</a></li>
 												</ul>
 											</li>
-											<li><a href="#">ThingSpeakの利用</a></li>
+											<li><a href="guide13.html">ThingSpeakの利用</a></li>
 										</ul>
 									</nav>
 
@@ -166,10 +160,10 @@
 										</ul>
 									</section>
 
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
+								<!-- Footer -->
+									<footer id="footer">
+										<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									</footer>
 
 						</div>
 					</div>
