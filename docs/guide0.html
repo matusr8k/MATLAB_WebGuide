@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>配列・行列の使い方 - MATLAB WebGuide</title>
+		<title>GITHUBサンプルコードの利用方法 - MATLAB WebGuide</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -41,37 +41,37 @@
 								<section>
 									<div class="content">
 									<header class="main">
-										<h1>配列・行列の使い方</h1>
+										<h1>GITHUBサンプルコードの利用方法</h1>
 										<p align="right">最終更新日: 2019/01/15 | 編集者: matusr8k | バージョン:R2018b</P>
 									</header>
-										<p>URL: <a href="https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLAB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/MATLAB%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E4%BD%BF%E3%81%84%E6%96%B9/matrixsample.m">
-												https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLABサンプルコード/MATLABの基本的な使い方</a></p>
+										<p>URL: <a href="https://github.com/matusr8k/MATLAB_WebGuide/tree/master">
+											https://github.com/matusr8k/MATLAB_WebGuide/tree/master</a></p>
 									</div>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<hr class="major" />
+
+									<h2>最初に</h2>
+									<p>このページは、MATLABを用いて研究データを解析し、整理されたデータグラフを得ることをサポートする目的で作られているWebガイドです。
+									<br>MATLABドキュメント内の必要な情報を簡素にまとめてガイドを作成しているため、より詳細で正確な情報はMATLABの公式ドキュメントをご確認ください。</p>
+									<p><a href="https://jp.mathworks.com/help/index.html">MATLAB Documentation - MathWorks 日本</a><p>
 
 									<hr class="major" />
 
-									<h2>配列の定義</h2>
-									<p>MATLABでは配列のインデックスを定義するとき<code>[]</code>で囲い、各要素を<code>空白(スペース)</code>区切りで定義します。</p>
-									<pre><code>A = [1 2 3 4 5 6 7 8 9];</code></pre>
-									<p>また、MATLAB上では、配列は行ベクトルとしても扱われます。</p>
+									<h2>サンプルコードの使い方</h2>
+									<p>ガイドを分かりやすく活用できるようにM-ファイルで記述されたサンプルコードを用意しました。
+									<br>以下のリンクからGithubに移動して、緑色の<code>Clone or download</code>＞<code>Desktop ZIP</code>よりダウンロードが可能です。</p>
+
+									<ul class="actions">
+										<li><a href="https://github.com/matusr8k/MATLAB_WebGuide/tree/master" class="button primary">GITHUB SAMPLE CODE</a></li>
+									</ul>
+
+									<p>ダウンロードしたフォルダの<code>MATLABサンプルコード</code>より各ガイドに対応したM-ファイルを選択し、MATLABで開きます。
+									<br>開いたら、MATLABの画面左上のタブの<code>エディタ</code>を選択し、<code>実行</code>からサンプルコードを呼び出すことができます。</p>
 
 									<hr class="major" />
 
-									<h2>行列の定義</h2>
-									<p>MATLAB上で行列を定義するときは、</p>
-									<pre><code>A = [1 2 3   %1列目
-     2 3 4   %2列目
-     3 4 5]; %3列目</code></pre>
-									<p>のように記述します。また、改行の代わりに<code>;</code>を用いて記述することも可能です。<br>定義された行列Aの大きさを求めたいときは<code>size(A)</code>を使用することで各次元ごとの要素数を表示できます。
-									</p>
-									<p>行列Aの転置行列や逆行列を求めたい場合、転置行列は行列Aの後に<code>'</code>を付けることで求めることができ、逆行列は<code>inv(A)</code>で求めることができます。</p>
-
-									<h2>行列の演算</h2>
-									<p>基本的に単一の算術演算子や関数では、行列の全ての要素に計算されます。<br>例えば、行列Aに対して、全ての要素にsin関数を計算したい場合は<code>sin(A)</code>のように記述することができます。
-									<br>他にも<code>A + 1</code>のように記述された加算、減算なども行列Aの全ての要素で計算されます。</p>
-									<p>しかし、行列の積を計算する場合、次元が一致しない場合エラーを出すので、行列Aのすべての要素を倍にしたい場合は<code>*</code>ではなく<code>.*</code>を使用します。</p>
+									<h2>編集中</h2>
+									<p>編集中</p>
 
 									<p> </p>
 								</section>
