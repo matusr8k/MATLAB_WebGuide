@@ -61,13 +61,16 @@
 									<span class="image object">
 										<img src="images/subplot.jpg" alt="" />
 									</span>
-									<p></p>
+									<p>グラフを並べて表示する場合<code>ax = subplot(h, w, n)</code>を使用します。hとwはそれぞれグラフの縦幅と横幅です。nは分割されたグラフの左上からの番号です。axはそのグラフを指し示します。</p>
+									<p>例えば、上図のようなグラフを作成する場合、一つ目のグラフを表示するには
+								<pre><code>ax = subplot(2,1,1);
+plot(ax, x, y)</code></pre>と記述します。二つ目のグラフを表示するには<code>ax2 = subplot(2,1,2)</code>を記述し、ax2のプロットを行います。</p>
 
 									<hr class="major" />
 
-									<h2>グラフの編集</h2>
-									<p>グラフに軸ラベルを追加したい場合、横軸ラベルは<code>xlabel("文字列")</code>で、縦軸ラベルは<code>ylabel("文字列")</code>で追加することができます。</p>
-									<p>グラフの表示範囲を制限したい場合はそれぞれ、<code>xlim([min max])</code>、<code>ylim([min max])</code>を使用します。[min max]はグラフの表示範囲の下限値と上限値の1×2の行ベクトルです。</p>
+									<h2>並んでいるグラフの編集</h2>
+									<p>subplotのグラフの場合でも使用する関数は同じものになりますが、最初の引数に編集対象がどのグラフかを指し示す必要があります。そのためにaxを最初の引数に加えて使用します。</p>
+									<p>例えば、グラフに軸ラベルを追加する場合、横軸ラベルは<code>xlabel(ax, "文字列")</code>、縦軸ラベルは<code>ylabel(ax, "文字列")</code>となります。</p>
 
 									<p> </p>
 								</section>
