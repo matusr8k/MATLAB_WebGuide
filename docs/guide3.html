@@ -64,7 +64,6 @@
 									<p>ラインプロットを作成するには、<code>plot(x, y)</code>を使用します。xとyはそれぞれ入力データの横軸と縦軸となります。
 									<br>また、<code>plot(x, y, '--r')</code>のように記述することでラインの色を変更したり、ラインを破線にすることもできます。</p>
 									<p>MATLABのドキュメントには、より詳しいオプションの説明が載っていますので、そちらも参考にしてみてください。
-									<br><a href="https://jp.mathworks.com/help/matlab/ref/plot.html">線形2次元プロット - MATLAB plot - MathWorks 日本</a></p>
 
 									<hr class="major" />
 
@@ -79,10 +78,13 @@
 										<img src="images/2lineplot.jpg" alt="" />
 									</span>
 									<p>ラインプロットを重ねて一つのグラフにする方法はいくつか存在します。ここでは、二つの例を見ていきましょう。
-									<br>まず、一つ目は最初に<code>hold on</code>を記述する方法です。<code>hold on</code>は常にグラフを保持する状態を指定するものです。解除するときは<code>hold off</code>を使用します。
-								　この方法を利用した場合、各グラフのラインプロットの色が重ならないように表示されます。</p>
+									<br>まず、一つ目は最初に<code>hold on</code>を記述する方法です。<code>hold on</code>は常にグラフを保持する状態を指定するものです。解除するときは<code>hold off</code>を使用します。この方法を利用した場合、各グラフのラインプロットの色が重ならないように表示されます。</p>
 								　<p>二つ目の方法は<code>plot(x1, y1, '--b', x2, y2, 'r')</code>のように記述する方法です。<code>x1, y1, '--b'</code>の部分が一つ目のグラフ表示の部分に当たります。こちらの方法では、LineSpecの引数を与えないと各グラフの色が同じになってしまうので注意しましょう。</p>
 
+								<hr class="major" />
+
+								<h3>参考リンク</h3>
+								<br><a href="https://jp.mathworks.com/help/matlab/ref/plot.html">線形2次元プロット - MATLAB plot - MathWorks 日本</a></p>
 									<p> </p>
 								</section>
 							</div>
