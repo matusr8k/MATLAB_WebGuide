@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>離散データの散布図を表示する - MATLAB WebGuide</title>
+		<title>テキストファイルを読み込む - MATLAB WebGuide</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -41,11 +41,11 @@
 								<section>
 									<div class="content">
 									<header class="main">
-										<h1>離散データの散布図を表示する</h1>
+										<h1>テキストファイルを読み込む</h1>
 										<p align="right">最終更新日: 2019/01/18 | 編集者: matusr8k | バージョン:R2018b</P>
 									</header>
-										<p>URL: <a href="https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLAB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95/plotscatter.m">
-											https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLABサンプルコード/グラフの作成方法</a></p>
+										<p>URL: <a href="https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLAB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E5%85%A5%E5%87%BA%E5%8A%9B/textreader.m">
+											https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLABサンプルコード/ファイルの入出力</a></p>
 									</div>
 
 									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
@@ -53,15 +53,21 @@
 									<hr class="major" />
 
 									<h2>サンプルコード</h2>
-									<p>このガイドでは、ダウンロードしたフォルダ内の<code>MATLABサンプルコード</code>＞<code>グラフの作成方法</code>＞<code>plotscatter.m</code>を使用します。</p>
-
+									<p>このガイドでは、ダウンロードしたフォルダ内の<code>MATLABサンプルコード</code>＞<code>ファイルの入出力</code>＞<code>textreader.m</code>を使用します。</p>
+									<p>また、読み書き用のサンプルデータは<code>MATLABサンプルコード</code>＞<code>ファイルの入出力</code>＞<code>サンプル用データ</code>＞<code>sampleText.txt</code>を用意しています。
 									<hr class="major" />
 
-									<h2>編集中</h2>
-									<p>編集中</p>
+									<h2>ファイルの取得</h2>
+									<p>サンプルコードの「ファイル取得セクション」を実行するとダイアログボックスからファイルを選択し、読み込むことができます。MATLABではファイルのパスは、画面左側にある現在のフォルダーからの相対パスか絶対パスかのいずれかで指定するため、
+<code>fullfile(path, file)</code>を使用して絶対パスを取得しています。</p>
+
+									<h2>テキストファイルを読み込む</h2>
+									<p>開かれたファイルfileIDをテキストファイルとして、書式を指定して読み込みを行うには<code>textscan(fileID, formatSpec)</code>を使用します。formatSpecは書式の指定子を表し、例えば<code>x:1 y:3</code>のようなテキストに対して
+<code>'x:%d y:%d'</code>と指定することによって、数値だけを取り出すことができます。formatSpecのより詳しい情報はMATLABドキュメンテーションを参照してください。
+									<br>読み取られたデータはcell配列という形式に代入されます。<code>celldisp(cell)</code>を使用することで、cell配列の内容を表示することができます。</p>
 
 									<h3>参考リンク</h3>
-									<p><a href="https://jp.mathworks.com/help/matlab/ref/scatter.html">散布図 - MATLAB scatter - MathWorks 日本</a></p>
+									<p><a href="https://jp.mathworks.com/help/matlab/ref/textscan.html">テキストファイルまたは文字列から書式付データを読み取る - MATLAB textscan - MathWorks 日本</a></p>
 
 									<p> </p>
 								</section>
