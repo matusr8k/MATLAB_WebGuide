@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>離散データの散布図を表示する - MATLAB WebGuide</title>
+		<title>テキストファイルに書き出す - MATLAB WebGuide</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -41,11 +41,11 @@
 								<section>
 									<div class="content">
 									<header class="main">
-										<h1>離散データの散布図を表示する</h1>
+										<h1>テキストファイルに書き出す</h1>
 										<p align="right">最終更新日: 2019/01/18 | 編集者: matusr8k | バージョン:R2018b</P>
 									</header>
-										<p>URL: <a href="https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLAB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95/plotscatter.m">
-											https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLABサンプルコード/グラフの作成方法</a></p>
+										<p>URL: <a href="https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLAB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E5%85%A5%E5%87%BA%E5%8A%9B/textwriter.m">
+											https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLABサンプルコード/ファイルの入出力</a></p>
 									</div>
 
 									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
@@ -53,15 +53,18 @@
 									<hr class="major" />
 
 									<h2>サンプルコード</h2>
-									<p>このガイドでは、ダウンロードしたフォルダ内の<code>MATLABサンプルコード</code>＞<code>グラフの作成方法</code>＞<code>plotscatter.m</code>を使用します。</p>
-
+									<p>このガイドでは、ダウンロードしたフォルダ内の<code>MATLABサンプルコード</code>＞<code>ファイルの入出力</code>＞<code>textwriter.m</code>を使用します。</p>
+									<p>また、読み書き用のサンプルデータは<code>MATLABサンプルコード</code>＞<code>ファイルの入出力</code>＞<code>サンプル用データ</code>＞<code>sampleText.txt</code>を用意しています。
 									<hr class="major" />
 
-									<h2>編集中</h2>
-									<p>編集中</p>
+									<h2>ファイルの取得</h2>
+									<p>テキストファイルに書き出すとき、ファイルを開く関数を<code>fopen(filename, 'w')</code>と指定して書き込み用にファイルを開く必要があります。</p>
+
+									<h2>テキストファイルに書き出す</h2>
+									<p>テキストファイルを書き出すには、<code>printf(fileID, formatSpec, value)</code>を使用します。formatSpecで<code>'%d'</code>のように指定した場合、行ベクトルvalueの各数値を1行ずつ出力します。</p>
 
 									<h3>参考リンク</h3>
-									<p><a href="https://jp.mathworks.com/help/matlab/ref/scatter.html">散布図 - MATLAB scatter - MathWorks 日本</a></p>
+									<p><a href="https://jp.mathworks.com/help/matlab/ref/fopen.html">ファイルを開くまたは開いているファイルに関する情報の取得 - MATLAB fopen - MathWorks 日本</a></p>
 
 									<p> </p>
 								</section>
