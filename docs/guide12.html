@@ -60,15 +60,11 @@
 									<h2>ファイルの取得</h2>
 									<p>fullfile(path, file)を使用して、ファイルの絶対パスを取得します。</p>
 
-									<h2>画像ファイルを読み込む</h2>
-									<p>画像ファイルを読み込むには<code>I = imread(filename)</code>を使用します。
-										<br>画像データIを表示するには<code>image(I)</code>を使用します。</p>
+									<h2>音声ファイルを読み込む</h2>
+									<p>音声ファイルを読み込むには<code>[y, Fs] = audioread(filename)</code>を使用します。ここで、yは各サンプル点での振幅を表し、Fsはサンプリング周波数を表します。また、読み込んだ音声データを再生するには<code>soundsc(y, Fs)</code>を使用します。</p>
 
-									<h2>画像ファイルに書き出す</h2>
-									<p>画像データIを画像ファイルに書き出すには<code>imwrite(I, filename)</code>を使用します。サンプルコードでは、画像データIは横幅×縦幅×3(RGB)の形式で扱われています。</p>
-
-									<h3>参考リンク</h3>
-									<p><a href="https://jp.mathworks.com/help/matlab/ref/fopen.html">ファイルを開くまたは開いているファイルに関する情報の取得 - MATLAB fopen - MathWorks 日本</a></p>
+									<h2>音声ファイルに書き出す</h2>
+									<p>音声データyを音声ファイルに書き出すには<code>audiowrite(filename, y, Fs)</code>を使用します。データ点yの周波数をFとするとき、サンプリング周波数Fsはナイキスト周波数2Fを超えている必要があります。</p>
 
 									<p> </p>
 								</section>
