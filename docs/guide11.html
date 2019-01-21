@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>離散データの散布図を表示する - MATLAB WebGuide</title>
+		<title>画像データの入出力 - MATLAB WebGuide</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -41,11 +41,11 @@
 								<section>
 									<div class="content">
 									<header class="main">
-										<h1>離散データの散布図を表示する</h1>
-										<p align="right">最終更新日: 2019/01/18 | 編集者: matusr8k | バージョン:R2018b</P>
+										<h1>画像データの入出力</h1>
+										<p align="right">最終更新日: 2019/01/21 | 編集者: matusr8k | バージョン:R2018b</P>
 									</header>
-										<p>URL: <a href="https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLAB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95/plotscatter.m">
-											https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLABサンプルコード/グラフの作成方法</a></p>
+										<p>URL: <a href="https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLAB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E5%85%A5%E5%87%BA%E5%8A%9B/imagereader.m">
+											https://github.com/matusr8k/MATLAB_WebGuide/blob/master/MATLABサンプルコード/ファイルの入出力</a></p>
 									</div>
 
 									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
@@ -53,15 +53,22 @@
 									<hr class="major" />
 
 									<h2>サンプルコード</h2>
-									<p>このガイドでは、ダウンロードしたフォルダ内の<code>MATLABサンプルコード</code>＞<code>グラフの作成方法</code>＞<code>plotscatter.m</code>を使用します。</p>
-
+									<p>このガイドでは、ダウンロードしたフォルダ内の<code>MATLABサンプルコード</code>＞<code>ファイルの入出力</code>＞<code>imagereader.m</code>,<code>imagewriter.m</code>を使用します。</p>
+									<p>また、読み書き用のサンプルデータは<code>MATLABサンプルコード</code>＞<code>ファイルの入出力</code>＞<code>サンプル用データ</code>＞<code>sampleImage.png</code>を用意しています。
 									<hr class="major" />
 
-									<h2>編集中</h2>
-									<p>編集中</p>
+									<h2>ファイルの取得</h2>
+									<p>fullfile(path, file)を使用して、ファイルの絶対パスを取得します。</p>
+
+									<h2>画像ファイルを読み込む</h2>
+									<p>画像ファイルを読み込むには<code>I = imread(filename)</code>を使用します。
+										<br>画像データIを表示するには<code>image(I)</code>を使用します。</p>
+
+									<h2>画像ファイルに書き出す</h2>
+									<p>画像データIを画像ファイルに書き出すには<code>imwrite(I, filename)</code>を使用します。サンプルコードでは、画像データIは横幅×縦幅×3(RGB)の形式で扱われています。</p>
 
 									<h3>参考リンク</h3>
-									<p><a href="https://jp.mathworks.com/help/matlab/ref/scatter.html">散布図 - MATLAB scatter - MathWorks 日本</a></p>
+									<p><a href="https://jp.mathworks.com/help/matlab/creating_plots/working-with-images-in-matlab-graphics.html">MATLABグラフィックスでのイメージの処理 - MATLAB & Simulink - MathWorks 日本</a></p>
 
 									<p> </p>
 								</section>
