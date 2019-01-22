@@ -19,3 +19,6 @@ filename = fullfile(path, file);
 %% soundsc(y, Fs);
 %  データを正規化し、音声として再生する
 soundsc(y, Fs);
+
+%% 読み込みオーディオデータのグラフ作成
+plot(y)
