@@ -21,4 +21,4 @@ filename = fullfile(path, file);
 soundsc(y, Fs);
 
 %% 読み込みオーディオデータのグラフ作成
-plot(y)
+plot(y(1:441)) % 100Hzの1周期まで表示可能

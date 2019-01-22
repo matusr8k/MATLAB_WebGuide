@@ -26,4 +26,4 @@ audiowrite(filename, y, Fs);
 soundsc(y, Fs);
 
 %% 書き出しオーディオデータのグラフ作成
-plot( (0: F/Fs: 1), y(1:ceil(Fs/F)) )
+plot( (0: F/Fs: 1), y(1:floor(Fs/F+1)) )
