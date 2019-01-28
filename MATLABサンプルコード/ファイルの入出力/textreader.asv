@@ -14,7 +14,8 @@ fileID = fopen(filename);
 %% textscan(fileID, 'フォーマット指定子');
 %  テキストファイルから書式付きデータを読み取る
 %  Cはcell配列となる
-C = textscan(fileID, '%*s X:%f Y:%f');
+C = textscan(fileID, '%*s X:%d Y:%d');
+A = fscanf(fileID,'%d %d')
 
 %  フォーマット指定子'%d'などは読み取るデータを指定できる
 %  詳しくは以下のリンク（Matlabドキュメンテーション）

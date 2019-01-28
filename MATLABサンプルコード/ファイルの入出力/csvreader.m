@@ -5,7 +5,7 @@
 %% ファイル取得セクション
 %  サンプル用に「sampleCSV.csv」を用意する
 %  ファイル選択ダイアログボックス
-[file, path] = uigetfile({'*.csv';'*.dat';'*.*'},...
+[file, path] = uigetfile({'*.txt';'*.csv';'*.dat';'*.*'},...
                           'Select CSV File');
 
 filename = fullfile(path, file);

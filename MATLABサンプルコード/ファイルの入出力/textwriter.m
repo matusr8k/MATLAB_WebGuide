@@ -13,9 +13,9 @@ filename = fullfile(path, file);
 fileID = fopen(filename, 'w');
 
 %% テキストデータ作成
-formatSpec = 'プロット点%d X:%d Y:%d\n';
+formatSpec = 'プロット点%d X:%23.15e Y:%23.15e\n';
 value = [1 2 3 4 5
-        10 14 16 20 24
+        10 14 16.5 20 24
         20 28 34 48 60];
 
 %% fprintf(fileID, 'フォーマット指定子', data);
