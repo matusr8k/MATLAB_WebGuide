@@ -59,14 +59,41 @@
 									</span>
 									<p><br></p>
 									<p>New ChannelのName、Fieldを設定し、ページ下部の<code>Save Channel</code>をクリックしてチャンネルを作ります。</p>
+									<p>試しにMathWorks公式の入門（<a href="https://jp.mathworks.com/help/thingspeak/analyze-your-data.html">参考リンク</a>）を実装してみましょう。以下の通りに入力し、チャンネルを作成します。</p>
 									<span class="image object">
 										<img src="../images/newchannels.png" alt="" />
+									</span>
+									<p>ここで作られたチャンネルの<code>Channel ID</code>とAPI Keysタブから見ることのできる<code>Write API Key</code>を記録しておきます。</p>
+									<p>次に作られたチャンネルのPrivate Viewタブを選択し、緑色の<code>MATLAB Analysis</code>ボタンをクリックします。</p>
+									<p>すると以下の画面が出てくるので<code>Custom</code>にチェックを入れて作成します。</p>
+									<span class="image object">
+										<img src="../images/matlabanalyzetemplate.png" alt="" />
+									</span>
+									<p>作成後の画面に<code>MATLAB Code</code>というフォームがあるはずなので、以下のコードを入力します。
+										このときwriteChIdには先ほど記録した<code>Channel ID</code>を、writeKeyには同じく<code>Write API Key</code>を記述しておきます。</p>
+<pre><code>% Enter your MATLAB Code below
+readChId = 12397;
+writeChId = ZZZZZ;              % Replace with your channel number
+writeKey = 'XXXXXXXXXXXXXXXX';  % Replace with your channel write key
+[temp,time] = thingSpeakRead(readChId,'Fields',4,'NumPoints',20);
+humidity = thingSpeakRead(readChId,'Fields',3,'NumPoints',20);
+tempC = (5/9)*(temp-32);
+b = 17.62;
+c = 243.5;
+gamma = log(humidity/100) + b*tempC./(c+tempC);
+dewPoint = c*gamma./(b-gamma)
+dewPointF = (dewPoint*1.8) + 32;
+thingSpeakWrite(writeChId,[temp,humidity,dewPointF],'Fields',[1,2,3],...
+'TimeStamps',time,'Writekey',writeKey);</pre></code>
+
+									<p><code>Save and Run</code>をクリックした後、先ほど作成したチャンネルのページを開きます。すると、グラフが表示されます。</p>
+									<span class="image object">
+										<img src="../images/thingspeakgraph.png" alt="" />
 									</span>
 
 									<hr class="major" />
 
-									<h2>例を試す</h2>
-									<p>ThingSpeakの例を試してみたい場合は、以下のリンクを参考にしてみてください。
+									<h2>参考リンク</h2><p>
 								<br><a href="https://jp.mathworks.com/help/thingspeak/analyze-your-data.html">データの解析 - MATLAB & Simulink - MathWorks 日本</a></p>
 									<p> </p>
 								</section>
