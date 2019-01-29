@@ -58,7 +58,14 @@
 									<h2>ファイルの取得</h2>
 									<p>サンプルコードの「ファイル取得セクション」を実行するとダイアログボックスからファイルを選択し、読み込むことができます。MATLABではファイルのパスは、画面左側にある現在のフォルダーからの相対パスか絶対パスかのいずれかで指定するため、
 <code>fullfile(path, file)</code>を使用して絶対パスを取得しています。</p>
+<pre><code>%% ファイル取得セクション
+%  サンプル用に「sampleText.txt」を用意する
+%  ファイル選択ダイアログボックス
+[file, path] = uigetfile({'*.txt';'*.csv';'*.*'},...
+                          'Select Text File');
 
+filename = fullfile(path, file);
+fileID = fopen(filename);</pre></code>
 									<h2>テキストファイルを読み込む</h2>
 									<p>開かれたファイルfileIDをテキストファイルとして、書式を指定して読み込みを行うには<code>C = textscan(fileID, formatSpec)</code>を使用します。formatSpecは書式の指定子を表し、例えば<code>x:1 y:3</code>のようなテキストに対して
 <code>'x:%d y:%d'</code>と指定することによって、数値だけを取り出すことができます。formatSpecのより詳しい情報はMATLABドキュメンテーションを参照してください。
