@@ -14,7 +14,7 @@ fileID = fopen(filename, 'r');
 %% [data, cnt] = fscanf(fileID, 'フォーマット指定子', [datasize]);
 %  ファイルからデータを読み込む
 data = fscanf(fileID, '%f\n', [2 inf]);
-% datasize は縦×横で読み込みするデータの長さを指定できる
+% datasize は横×縦で読み込みするデータの長さを指定できる
 % infはファイル終端までを表す
 
 %% 入力データを表示する
