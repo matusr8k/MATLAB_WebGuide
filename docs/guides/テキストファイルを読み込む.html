@@ -62,9 +62,37 @@ fileID = fopen(filename);</pre></code>
 <code>'x:%d y:%d'</code>と指定することによって、数値だけを取り出すことができます。formatSpecのより詳しい情報はMATLABドキュメンテーションを参照してください。
 									<br>読み取られたデータCにはcell配列という型で代入されます。<code>celldisp(C)</code>を使用することで、cell配列の内容を表示することができます。</p>
 
+									<hr class="major" />
+
+									<h2>cell配列の活用</h2>
+									<p>cell配列は特殊な型の配列であり、中に任意のデータ型の変数を格納することができます。例えば、一つのcell配列に文字列と数値の配列を格納することもできます。</p>
+									<p>ここでは次のような形式のテキストファイルからデータを読み取ってみましょう。</p>
+<pre><code>テキストファイル.txt
+x軸ラベル名  y軸ラベル名　// 1行目
+x0          y0
+x1          y1
+…           …
+xn          yn</pre></code>
+<p>読み取るためのコードは以下の通りです。</p>
+<pre><code>textreader.m（サンプルコード改造）
+%% ファイル取得セクション（省略）
+%% textscan(fileID, 'フォーマット指定子');
+Clabel = textscan(fileID, '%s %s', 1);
+Cdata  = textscan(fileID, '%d %d');
+%% 入力データを表示する
+plot(Cdata{1}, Cdata{2});
+xlabel(Clabel{1});
+ylabel(Clabel{2});
+
+fclose(fileID);</pre></code>
+<p>まず、1行目を読み取るために<code>Clabel = textscan(fileID, '%s %s', 1)</code>と記述します。三つ目の引数である1はtextscanを何回行うかを指定するものです。
+<code>textscan</code>は同じファイルからの読み込みの場合、次の読み込みは、以前の読み込みの最後から続けて読み込みを行います。
+<br>なので、残りのデータを読み取るために<code>Cdata = textscan(fileID, '%d %d')</code>を記述します。</p>
+
 									<h3>参考リンク</h3>
 									<p><a href="https://jp.mathworks.com/help/matlab/ref/textscan.html">テキストファイルまたは文字列から書式付データを読み取る - MATLAB textscan - MathWorks 日本</a>
-									<br><a href="https://jp.mathworks.com/help/matlab/ref/fscanf.html">テキスト ファイルからのデータの読み取り - MATLAB fscanf - MathWorks 日本</a></p>
+									<br><a href="https://jp.mathworks.com/help/matlab/ref/fscanf.html">テキスト ファイルからのデータの読み取り - MATLAB fscanf - MathWorks 日本</a>
+									<br><a href="https://jp.mathworks.com/help/matlab/ref/cell.html">cell配列 - MATLAB - MathWorks 日本</a></p>
 
 									<p> </p>
 								</section>
