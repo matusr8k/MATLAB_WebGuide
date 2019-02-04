@@ -87,7 +87,7 @@ ylabel(Clabel{2});
 fclose(fileID);</pre></code>
 <p>まず、1行目を読み取るために<code>Clabel = textscan(fileID, '%s %s', 1)</code>と記述します。三つ目の引数である1はtextscanを何回行うかを指定するものです。
 <code>textscan</code>は同じファイルからの読み込みの場合、次の読み込みは、以前の読み込みの最後から続けて読み込みを行います。
-<br>なので、残りのデータを読み取るために<code>Cdata = textscan(fileID, '%d %d')</code>を記述します。</p>
+<br>なので、残りのデータを読み取るために<code>Cdata = textscan(fileID, '%d %d')</code>を記述します。これでそれぞれの値を読み取ることができます。</p>
 
 									<h3>参考リンク</h3>
 									<p><a href="https://jp.mathworks.com/help/matlab/ref/textscan.html">テキストファイルまたは文字列から書式付データを読み取る - MATLAB textscan - MathWorks 日本</a>
